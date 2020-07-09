@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'treasures/base.html' %}
+{% block content %}
+<div class="container text-center">
+    <p>
+        <h3 class="alert alert-success">Edit the treasure </h3>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+               <button type="submit">Save</button>
+            </form>
+    </p>
+</div>
+{% endblock %}
+</body>
+</html>

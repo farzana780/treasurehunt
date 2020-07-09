@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'treasures/base.html' %}
+{% block content %}
+
+    <div class="container text-center">
+        <h1>This is Our Detail Page</h1>
+        <h1 class="alert alert-success">{{treasure.name}} </h1>
+        <p>
+           Value: {{treasure.value}}<br>
+           Material: {{treasure.material}}<br>
+           Location: {{treasure.location}}<br>
+           <img src="{{treasure.image_url}}">
+        </p>
+
+    </div>
+{% endblock %}
+</body>
+</html>
